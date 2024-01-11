@@ -5,5 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <h2>cm to inches</h2>
+      <div class="inputdiv">
+        <input type="text" id="input" placeholder="length in cm" />
+      </div>
+      <div>
+        <button type="submit">click to inches</button>
+      </div>
+      <div id="result"></div>
+    </div>
+    <script>
+      const cmVal = Number(document.getElementById("input").value);
+      const inchVal = cmVal / 2.54;
+      const result = document.getElementById("result");
+      result.innerHTML = inchVal.toFixed(2) + "inches";
+    </script>
+  </body>
 </html>
